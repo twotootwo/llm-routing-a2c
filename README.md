@@ -43,18 +43,18 @@ State는 cheap LLM이 생성한 1차 답변을 기반으로 한
 ## 1. Project Structure
 
 ```text
-.
-├── training.ipynb           # Colab/노트북에서 전체 실험 실행용
-├── train_a2c.py             # A2C 학습 스크립트 (메인)
-├── evaluate_models.py       # Baseline + A2C checkpoint 평가
-├── evaluate_v1.py           # EM/F1 계산 함수
-├── qa_env.py                # QARoutingEnv (Gym 스타일 환경)
-├── routing_config.py        # cheap/strong 모델 및 reward weight 설정
-├── squad_dataset.py         # HuggingFace SQuAD v1.1 래퍼
-├── state_features.py        # 11차원 state feature 추출
-├── llm_wrapper.py           # HF LLM wrapper (cheap LM)
-├── qa_span_wrapper.py       # QA span extractor wrapper (strong QA)
-└── lm+qa/                   # 학습 결과/체크포인트 저장 폴더 (실험 후 생성)
+code
+  ├── training.ipynb           # Colab/노트북에서 전체 실험 실행용
+  ├── train_a2c.py             # A2C 학습 스크립트 (메인)
+  ├── evaluate_models.py       # Baseline + A2C checkpoint 평가
+  ├── evaluate_v1.py           # EM/F1 계산 함수
+  ├── qa_env.py                # QARoutingEnv (Gym 스타일 환경)
+  ├── routing_config.py        # cheap/strong 모델 및 reward weight 설정
+  ├── squad_dataset.py         # HuggingFace SQuAD v1.1 래퍼
+  ├── state_features.py        # 11차원 state feature 추출
+  ├── llm_wrapper.py           # HF LLM wrapper (cheap LM)
+  ├── qa_span_wrapper.py       # QA span extractor wrapper (strong QA)
+  └── lm+qa/                   # 학습 결과/체크포인트 저장 폴더 (실험 후 생성)
 
 training.ipynb 노트북을 열어
 상단 셀에서 환경 설치 → 하단 셀에서 학습 및 평가 명령을 순서대로 실행하면 됩니다.
